@@ -19,7 +19,7 @@ class _PlayPage extends State<PlayPage> {
   bool isLoading = true;
 
   Future<void> getSqlData() async {
-    var url = "https://george-ivchenko.ru/among/profile.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "randToken": randToken,
     });
@@ -51,7 +51,7 @@ class _PlayPage extends State<PlayPage> {
   }
 
   final BannerAd myBanner = BannerAd(
-    adUnitId: 'ca-app-pub-9673031653657238/1340765234',
+    adUnitId: '',
     size: AdSize.banner,
     request: AdRequest(),
     listener: BannerAdListener(),

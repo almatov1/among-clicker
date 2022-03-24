@@ -80,7 +80,7 @@ class _OnlinePage extends State<OnlinePage> {
   }
 
   Future<void> takeGamesInfo() async {
-    var url = "https://george-ivchenko.ru/among/online/takeGamesInfo.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "mail": mail,
     });
@@ -89,7 +89,7 @@ class _OnlinePage extends State<OnlinePage> {
   }
 
   Future<void> checkActiveGames() async {
-    var url = "https://george-ivchenko.ru/among/online/checkActiveGames.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "randToken": randToken,
     });
@@ -106,7 +106,7 @@ class _OnlinePage extends State<OnlinePage> {
   }
 
   Future<void> getSqlData() async {
-    var url = "https://george-ivchenko.ru/among/profile.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "randToken": randToken,
     });
@@ -134,7 +134,7 @@ class _OnlinePage extends State<OnlinePage> {
   }
 
   Future<void> randServer() async {
-    var url = "https://george-ivchenko.ru/among/online/randServer.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "randToken": randToken,
       "mail": mail,
@@ -155,7 +155,7 @@ class _OnlinePage extends State<OnlinePage> {
   }
 
   Future<void> stopGame() async {
-    var url = "https://george-ivchenko.ru/among/online/stopGame.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "gameToken": gameToken,
     });
@@ -174,7 +174,7 @@ class _OnlinePage extends State<OnlinePage> {
       counterServer++;
     });
     while (end == false) {
-      var url = "https://george-ivchenko.ru/among/online/checkServer.php";
+      var url = "";
       var response = await http.post(Uri.parse(url), body: {
         "gameToken": gameToken,
       });
@@ -193,7 +193,7 @@ class _OnlinePage extends State<OnlinePage> {
       } else {
         if (counterServer > secInts[rng.nextInt(14)]) {
           end = true;
-          var url = "https://george-ivchenko.ru/among/online/botPlay.php";
+          var url = "";
           var response = await http.post(Uri.parse(url), body: {
             "gameToken": gameToken,
             "botName": botName[rng.nextInt(14)],
@@ -234,7 +234,7 @@ class _OnlinePage extends State<OnlinePage> {
   }
 
   final BannerAd myBanner = BannerAd(
-    adUnitId: 'ca-app-pub-9673031653657238/1340765234',
+    adUnitId: '',
     size: AdSize.banner,
     request: AdRequest(),
     listener: BannerAdListener(),

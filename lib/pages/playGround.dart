@@ -50,7 +50,7 @@ class _PlayGround extends State<PlayGround> {
   AudioCache player = AudioCache(prefix: 'assets/audio/');
 
   Future<void> getSqlData() async {
-    var url = "https://george-ivchenko.ru/among/profile.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "randToken": randToken,
     });
@@ -76,14 +76,14 @@ class _PlayGround extends State<PlayGround> {
 
   Future<void> lvlUp() async {
     if (lvl < int.parse(widget.thisLvl)) {
-      var url = "https://george-ivchenko.ru/among/lvlUp.php";
+      var url = "";
       await http.post(Uri.parse(url), body: {
         "randToken": randToken,
         "lvl": widget.thisLvl,
         "winCoins": winCoins,
       });
     } else {
-      var url = "https://george-ivchenko.ru/among/moneyUp.php";
+      var url = "";
       await http.post(Uri.parse(url), body: {
         "randToken": randToken,
         "winCoins": winCoins,
@@ -92,7 +92,7 @@ class _PlayGround extends State<PlayGround> {
   }
 
   Future<void> useItem() async {
-    var url = "https://george-ivchenko.ru/among/useItem.php";
+    var url = "";
     await http.post(Uri.parse(url), body: {
       "randToken": randToken,
       "type": itemType,
@@ -228,7 +228,7 @@ class _PlayGround extends State<PlayGround> {
 
   adLoad() async {
     await InterstitialAd.load(
-        adUnitId: 'ca-app-pub-9673031653657238/3541560777',
+        adUnitId: '',
         request: AdRequest(),
         adLoadCallback: InterstitialAdLoadCallback(
           onAdLoaded: (InterstitialAd ad) {

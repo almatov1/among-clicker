@@ -22,7 +22,7 @@ class _Menu extends State<Menu> with WidgetsBindingObserver {
   late String randToken;
   var postJson = [];
   static const _chars =
-      'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
+      '';
   Random _rnd = Random();
   AudioCache player = AudioCache(prefix: 'assets/audio/');
   AudioPlayer audioPlayer = AudioPlayer(mode: PlayerMode.LOW_LATENCY);
@@ -88,7 +88,7 @@ class _Menu extends State<Menu> with WidgetsBindingObserver {
   }
 
   Future register() async {
-    var url = "https://george-ivchenko.ru/among/reg.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "mail": _googleSignIn.currentUser!.email,
       "randToken": randToken,

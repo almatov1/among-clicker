@@ -65,7 +65,7 @@ class _OnlinePlayGround extends State<OnlinePlayGround> {
   }
 
   Future<void> gameActiveCheck() async {
-    var url = "https://george-ivchenko.ru/among/online/gameActiveCheck.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "gameToken": widget.gameToken,
     });
@@ -96,7 +96,7 @@ class _OnlinePlayGround extends State<OnlinePlayGround> {
   }
 
   Future<void> getSqlData() async {
-    var url = "https://george-ivchenko.ru/among/profile.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "randToken": randToken,
     });
@@ -165,7 +165,7 @@ class _OnlinePlayGround extends State<OnlinePlayGround> {
   }
 
   Future<void> takeServerInfo() async {
-    var url = "https://george-ivchenko.ru/among/online/takeServerInfo.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "gameToken": widget.gameToken,
     });
@@ -185,7 +185,7 @@ class _OnlinePlayGround extends State<OnlinePlayGround> {
 
   Future<void> putServerWithBotInfo() async {
     var url =
-        "https://george-ivchenko.ru/among/online/putServerWithBotInfo.php";
+        "";
     await http.post(Uri.parse(url), body: {
       "gameToken": widget.gameToken,
       "coinsValue": coinsIndicator.toString(),
@@ -205,7 +205,7 @@ class _OnlinePlayGround extends State<OnlinePlayGround> {
       userTypeTimer = 'createTimer';
     }
 
-    var url = "https://george-ivchenko.ru/among/online/putServerInfo.php";
+    var url = "";
     await http.post(Uri.parse(url), body: {
       "gameToken": widget.gameToken,
       "userType": userType,
@@ -216,7 +216,7 @@ class _OnlinePlayGround extends State<OnlinePlayGround> {
   }
 
   Future<void> botWin() async {
-    var url = "https://george-ivchenko.ru/among/online/botWin.php";
+    var url = "";
     await http.post(Uri.parse(url), body: {
       "gameToken": widget.gameToken,
     });
@@ -231,7 +231,7 @@ class _OnlinePlayGround extends State<OnlinePlayGround> {
       else
         userType = 'connectMail';
 
-      var url = "https://george-ivchenko.ru/among/online/winGame.php";
+      var url = "";
       var response = await http.post(Uri.parse(url), body: {
         "gameToken": widget.gameToken,
         "userType": userType.toString(),
@@ -256,7 +256,7 @@ class _OnlinePlayGround extends State<OnlinePlayGround> {
     else
       userType = 'createMail';
 
-    var url = "https://george-ivchenko.ru/among/online/winGame.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "gameToken": widget.gameToken,
       "userType": userType.toString(),
@@ -270,7 +270,7 @@ class _OnlinePlayGround extends State<OnlinePlayGround> {
   }
 
   Future<void> drawGame() async {
-    var url = "https://george-ivchenko.ru/among/online/drawGame.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "gameToken": widget.gameToken,
     });
@@ -282,7 +282,7 @@ class _OnlinePlayGround extends State<OnlinePlayGround> {
   }
 
   Future<void> useItem() async {
-    var url = "https://george-ivchenko.ru/among/useItem.php";
+    var url = "";
     await http.post(Uri.parse(url), body: {
       "randToken": randToken,
       "type": itemType,
@@ -450,7 +450,7 @@ class _OnlinePlayGround extends State<OnlinePlayGround> {
 
   adLoad() async {
     await InterstitialAd.load(
-        adUnitId: 'ca-app-pub-9673031653657238/3541560777',
+        adUnitId: '',
         request: AdRequest(),
         adLoadCallback: InterstitialAdLoadCallback(
           onAdLoaded: (InterstitialAd ad) {

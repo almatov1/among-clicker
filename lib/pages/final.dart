@@ -61,7 +61,7 @@ class _FinalPage extends State<FinalPage> {
                               style: TextStyle(fontSize: 18),
                             ),
                             Text(S.of(context).finalPage_authors),
-                            Text('George Ivchenko\nAzamat Almatov'),
+                            Text('Azamat Almatov'),
                             Text(''),
                             Text('Devio Software 2021'),
                           ],

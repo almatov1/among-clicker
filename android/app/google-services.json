@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "85615889433",
+    "project_id": "amongclicker-32415",
+    "storage_bucket": "amongclicker-32415.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85615889433:android:bc9252c72f5e3cb1972e88",
+        "android_client_info": {
+          "package_name": "com.devio.amongclicker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85615889433-c1j1kb84tc6thu4oreeota7r9rqjks3v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devio.amongclicker",
+            "certificate_hash": "20ce1ce95eccc38a5a0c5e87888078777881bfc7"
+          }
+        },
+        {
+          "client_id": "85615889433-5h1ua78v7a1lm7461itoho43kr29nruo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGKU48DF41dv5Lypetun_P8uQwDBh4X2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85615889433-5h1ua78v7a1lm7461itoho43kr29nruo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

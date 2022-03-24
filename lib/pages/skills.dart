@@ -31,7 +31,7 @@ class _SkillsPage extends State<SkillsPage> {
 
   Future<void> skillUp() async {
     if (int.parse(coins) >= 0) {
-      var url = "https://george-ivchenko.ru/among/skillUp.php";
+      var url = "";
       await http.post(Uri.parse(url), body: {
         "randToken": randToken,
         "type": type,
@@ -42,7 +42,7 @@ class _SkillsPage extends State<SkillsPage> {
   }
 
   Future<void> getSqlData() async {
-    var url = "https://george-ivchenko.ru/among/profile.php";
+    var url = "";
     var response = await http.post(Uri.parse(url), body: {
       "randToken": randToken,
     });
@@ -89,7 +89,7 @@ class _SkillsPage extends State<SkillsPage> {
 
   bannerInit() async {
     await InterstitialAd.load(
-        adUnitId: 'ca-app-pub-9673031653657238/3541560777',
+        adUnitId: '',
         request: AdRequest(),
         adLoadCallback: InterstitialAdLoadCallback(
           onAdLoaded: (InterstitialAd ad) {
@@ -105,7 +105,7 @@ class _SkillsPage extends State<SkillsPage> {
   }
 
   final BannerAd myBanner = BannerAd(
-    adUnitId: 'ca-app-pub-9673031653657238/1340765234',
+    adUnitId: '',
     size: AdSize.banner,
     request: AdRequest(),
     listener: BannerAdListener(),
